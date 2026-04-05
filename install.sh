@@ -13,7 +13,7 @@ TMP_DIR="/tmp/network_install"
 
 mkdir -p "$TMP_DIR"
 
-curl -L -o "$ZIP_FILE" "$URL"
+curl -fsSL -o "$ZIP_FILE" "$URL"
 
 rm -f "$TMP_DIR"/.DS_Store
 rm -f "$TMP_DIR"/._*
