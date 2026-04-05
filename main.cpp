@@ -172,7 +172,7 @@ static void print_json(const std::vector<NetworkDevice>& devices,
 static void print_main_help() {
     std::cout << "\n";
     std::cout << BOLD << "Usage:" << RESET << "\n";
-    std::cout << "      ./network [command]\n";
+    std::cout << "      network [command]\n";
     std::cout << "\n";
     std::cout << BOLD << "Commands:" << RESET << "\n";
     std::cout << "      get           Resolve and display info for one or more IP addresses\n";
@@ -187,14 +187,14 @@ static void print_main_help() {
     std::cout << "      --A           Show all devices including non-responding\n";
     std::cout << "      --nocache     Skip cache read/write for this run\n";
     std::cout << "\n";
-    std::cout << "Use " << BOLD << "./network [command] --help" << RESET
+    std::cout << "Use " << BOLD << "network [command] --help" << RESET
               << " for command-specific details.\n\n";
 }
 
 static void print_get_help() {
     std::cout << "\n";
     std::cout << BOLD << "Usage:" << RESET << "\n";
-    std::cout << "      ./network get [flags]\n";
+    std::cout << "      network get [flags]\n";
     std::cout << "\n";
     std::cout << BOLD << "Input flags:" << RESET << "\n";
     std::cout << "      -ip <ip>[,<ip>...]        One or more individual IP addresses\n";
@@ -215,16 +215,16 @@ static void print_get_help() {
     std::cout << "      --nocache                 Skip cache for this run (always re-probe)\n";
     std::cout << "\n";
     std::cout << BOLD << "Examples:" << RESET << "\n";
-    std::cout << "      ./network get -ip 192.168.1.1\n";
-    std::cout << "      ./network get -ip 192.168.1.1,192.168.1.2 -o hostname,ipv4 --json\n";
-    std::cout << "      ./network get -subnet 192.168.1.0/24 --R\n";
-    std::cout << "      ./network get -range 192.168.1.1,192.168.1.50 --xml\n\n";
+    std::cout << "      network get -ip 192.168.1.1\n";
+    std::cout << "      network get -ip 192.168.1.1,192.168.1.2 -o hostname,ipv4 --json\n";
+    std::cout << "      network get -subnet 192.168.1.0/24 --R\n";
+    std::cout << "      network get -range 192.168.1.1,192.168.1.50 --xml\n\n";
 }
 
 static void print_current_help() {
     std::cout << "\n";
     std::cout << BOLD << "Usage:" << RESET << "\n";
-    std::cout << "      ./network current [flags]\n";
+    std::cout << "      network current [flags]\n";
     std::cout << "\n";
     std::cout << "      Displays the network information for the machine running this command.\n";
     std::cout << "      Resolves hostname, IPv4, IPv6, MAC address, and vendor from local interfaces.\n";
@@ -238,7 +238,7 @@ static void print_current_help() {
 static void print_clear_cache_help() {
     std::cout << "\n";
     std::cout << BOLD << "Usage:" << RESET << "\n";
-    std::cout << "      ./network clear-cache\n";
+    std::cout << "      network clear-cache\n";
     std::cout << "\n";
     std::cout << "      Deletes the on-disk cache file at " << CACHE_PATH << ".\n";
     std::cout << "      Cache entries expire automatically after 1 hour.\n";
@@ -304,7 +304,7 @@ static int cmd_get(int argc, char* argv[]) {
 
     if (ip_arg.empty() && subnet_arg.empty() && range_arg.empty()) {
         std::cerr << "Error: provide at least one of -ip, -subnet, or -range\n";
-        std::cerr << "Run './network get --help' for usage.\n";
+        std::cerr << "Run 'network get --help' for usage.\n";
         return 1;
     }
 
@@ -421,6 +421,6 @@ int main(int argc, char* argv[]) {
     if (cmd == "get")                            { return cmd_get(argc, argv);        }
 
     std::cerr << "Unknown command: " << cmd << "\n";
-    std::cerr << "Run './network help' to see available commands.\n";
+    std::cerr << "Run 'network help' to see available commands.\n";
     return 1;
 }
