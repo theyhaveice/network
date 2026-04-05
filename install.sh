@@ -5,11 +5,6 @@ if [[ "$OSTYPE" != "darwin"* ]]; then
     exit 1
 fi
 
-if [[ "$EUID" -ne 0 ]]; then
-   echo "This script must be run with sudo."
-   exit 1
-fi
-
 echo "Downloading network v0.1.0..."
 
 URL="https://github.com/theyhaveice/network/releases/download/v0.1.0-alpha/network-v0.1.0-macos.zip"
