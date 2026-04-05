@@ -7,6 +7,7 @@ A lightweight macOS command-line tool for resolving and scanning network devices
 ## Table of Contents
 
 - [About](#about)
+- [Installation](#installation)
 - [Usage](#usage)
   - [Commands](#commands)
   - [Flags](#flags)
