@@ -37,7 +37,7 @@ The scanner uses a concurrent thread pool (default 64 threads) to sweep subnets 
 ## Installation
 to install `network`. run this in `Terminal`
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/theyhaveice/network/main/install.sh" | sh
+curl -fsSL "https://raw.githubusercontent.com/theyhaveice/network/main/install.sh" | sudo sh
 
 # Downloading network v0.1.0...
 # network v0.1.0 installed successfully!
