@@ -74,7 +74,7 @@ Run `./network [command] --help` for command-specific details.
 
 | Flag | Description |
 |---|---|
-| `--R` | Include all responding devices, even those with no hostname |
+| `--R` | Include all responding devices |
 | `--A` | Include every IP in the range, responding or not |
 
 #### Cache flags
