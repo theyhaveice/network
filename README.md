@@ -36,7 +36,7 @@ The scanner uses a concurrent thread pool (default 64 threads) to sweep subnets 
 ## Usage
 
 ```
-./network [command] [flags]
+network [command] [flags]
 ```
 
 ### Commands
@@ -48,7 +48,7 @@ The scanner uses a concurrent thread pool (default 64 threads) to sweep subnets 
 | `clear-cache` | Delete all cached device results |
 | `help` | Show help |
 
-Run `./network [command] --help` for command-specific details.
+Run `network [command] --help` for command-specific details.
 
 ---
 
@@ -89,25 +89,25 @@ Run `./network [command] --help` for command-specific details.
 
 ```bash
 # Look up a single IP
-./network get -ip 192.168.1.1
+network get -ip 192.168.1.1
 
 # Look up multiple IPs, showing only hostname and IPv4 as JSON
-./network get -ip 192.168.1.1,192.168.1.2 -o hostname,ipv4 --json
+network get -ip 192.168.1.1,192.168.1.2 -o hostname,ipv4 --json
 
 # Scan a full subnet, showing all responding devices
-./network get -subnet 192.168.1.0/24 --R
+network get -subnet 192.168.1.0/24 --R
 
 # Scan an IP range and output as XML
-./network get -range 192.168.1.1,192.168.1.50 --xml
+network get -range 192.168.1.1,192.168.1.50 --xml
 
 # Show info for the current machine
-./network current
+network current
 
 # Show only the current machine's MAC address and vendor
-./network current -o macaddress,vendor
+network current -o macaddress,vendor
 
 # Clear the on-disk cache
-./network clear-cache
+network clear-cache
 ```
 
 ---
