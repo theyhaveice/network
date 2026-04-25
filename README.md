@@ -1,3 +1,5 @@
+[url](https://www.google.com/)
+
 # network
 
 A lightweight macOS command-line tool for resolving and scanning network devices. Query a single IP, sweep a subnet, or inspect your own machine — with output in plain text, JSON, or XML.
